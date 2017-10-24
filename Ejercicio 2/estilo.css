@@ -1,0 +1,68 @@
+/*
+1. El título del sitio tiene la fuente “Anton”, con color #414239 y tamaño de 4em
+2. Los títulos de las películas tienen la fuente “Lobster”, con color #9e0947 y tamaño de 2.5
+em
+3. Por cada película, agregue un video según el estándar HTML5.
+4. Cada bloque de películas tiene un borde punteado, de 1px, con color #d7d8cb
+5. El texto de la sinopsis debe justificarlo
+6. Los títulos “Sinopsis” y “Reparto” tienen color #ce105c y tamaño 1em
+7. Utilice “Verdana” como fuente para todo el texto
+8. En la lista de reparto:
+a. Todos los nombres están relacionados con un atributo famoso y cuyo valor puede
+ser principal o secundario. En el caso que sea principal estará en negrita. En
+caso que sea secundario estará en itálica.
+b. Reemplace la viñeta por la imagen https://goo.gl/6hPSSH
+9. Cuando pase el mouse sobre la imagen de la película, ésta cambiará su opacidad hasta en
+0.8.
+*/
+
+* {
+	font: "Verdana";
+}
+
+header > h1 {
+	font: "Anton";
+	color: #414239;
+	size: 4em;
+}
+
+.pelicula {
+	border: 5px dotted #d7d8cb;
+}
+
+.pelicula > h2 {
+	font: "Anto“Lobster”n";
+	color: #9e0947;
+	size: 2.5em;
+}
+
+.pelicula h3 {
+	color: #ce105c;
+	size: 1em;
+}
+
+.pelicula > img, .sinopsis, .reparto, .video {
+	display: inline-block;
+	margin: 10px;
+	width: 23%;
+}
+
+.pelicula li {
+	list-style-image: url("https://goo.gl/6hPSSH");
+}
+
+.pelicula > img:hover {
+	opacity: 0.8;
+}
+
+.sinopsis {
+	text-align: justify;
+}
+
+li[famoso=principal] {
+	font-weight: bold;
+}
+
+li[famoso=secundario] {
+	font-style: italic;
+}
